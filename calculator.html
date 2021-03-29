@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>
+            Calculator on Web
+        </title>
+        <style>
+            .divhtml{
+                border:1px solid red;font-size:larger;color:red;text-align:center;
+            }
+            #menu{
+                text-align:center;
+            }
+            #operation{
+                font-style:italic;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div class='divhtml'>
+                First Number:
+                <input type = 'number' id = 'num1' style=width:40vw;height:10vh;>
+            </div>
+            <div class='divhtml'>
+                Second Number:
+                <input type = 'number' id = 'num2' style=width:40vw;height:10vh;>
+            <div style=text-align:center;>
+                <button type = 'button' id = 'btn' onclick = Operation()></button>
+            </div>
+            </div>
+            <div id='menu'>
+                <form>
+                    <select id = 'selected' onchange = valueChange()>
+                        <option value = '0' id ='add' selected>Addition</option>
+                        <option value = '1' id ='sub'> Subtraction </option>
+                        <option value = '2' id ='mult'>Multiplication</option>
+                        <option value = '3' id ='div'> Division </option>
+                    </select>
+                </form>
+            </div>
+            <div>
+                <p id = 'operation'></p>
+            </div>                                                                                                                                                                                                                                 
+        </form>
+        <script>
+            valueChange = () => {
+                var selection = document.getElementById('selected');
+                var button = document.getElementById('btn');
+                var selNum = selection.value;
+                if (selNum == 0){
+                    button.innerHTML = 'Add';
+                }
+                else if (selNum == 1){
+                    button.innerHTML = 'Subtract';
+                }
+                else if (selNum == 2){
+                    button.innerHTML = 'Multiply';
+                }
+                else{
+                    button.innerHTML = 'Divide';
+                }
+            }
+            Operation = () => {
+                var Num1 = document.getElementById('num1').value;
+                var Num2 = document.getElementById('num2').value;
+                var operate = document.getElementById('operation');
+                var selection = document.getElementById('selected');
+                var button = document.getElementById('btn');
+                var selNum = selection.value;
+                if (selNum == 0){
+                    var data1 = `Your Addition is ${parseFloat(Num1)+parseFloat(Num2)}`;
+                    operate.innerHTML = data1;
+                }
+                else if (selNum == 1){
+                    var data2 = `Your Subtraction is ${parseFloat(Num1)-parseFloat(Num2)}`
+                    operate.innerHTML = data2;
+                }
+                else if (selNum == 2){
+                    var data3 = `Your product is ${parseFloat(Num1)*parseFloat(Num2)}`
+                    operate.innerHTML = data3;
+                }
+                else {
+                    var data4 = `Your division is ${parseFloat(Num1)/parseFloat(Num2)}`
+                    operate.innerHTML = data4;
+                }
+            }
+        </script>
+    </body>
+</html>
