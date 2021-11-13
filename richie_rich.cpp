@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-
+    //This is the code I changed.
     long int T;
     cin>>T;
 
@@ -10,7 +10,7 @@ int main(){
         int a,b,x,n;
         cin>>a>>b>>x;
         n=(b-a)/x;
-        cout<<n;
+        cout<<"It will take"<<n<<"Years to complete.";
     }
     
     return 0;
