@@ -19,7 +19,7 @@ int main(){
     }
     cout<<endl<<"This is the sorted array"<<endl;
     
-    sort(num,num+n);
+    sort(num,num+n,greater<int>());
     for(int i=0; i<n; i++){
         cout<<num[i]<<" ";
     }

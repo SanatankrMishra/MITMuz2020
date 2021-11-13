@@ -10,7 +10,7 @@ int main(){
         int a,b,x,n;
         cin>>a>>b>>x;
         n=(b-a)/x;
-        cout<<"It will take"<<n<<"Years to complete.";
+        cout<<"It will take"<<n<<"Years to complete."<<endl;
     }
     
     return 0;
