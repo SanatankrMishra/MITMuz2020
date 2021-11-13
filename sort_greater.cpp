@@ -5,9 +5,22 @@ using namespace std;
 
 int main(){
 
-    int num[]={1,8,2,7,3,4};
-    sort(num,num+6);
-    for(int i=0; i<6; i++){
+    int n;
+    cin>>n;
+    int num[n];
+
+    cout<<"Input the array elements"<<endl;
+    for(int i=0; i<n; i++){
+        cin>>num[i];
+    }
+    cout << "See your input before sorting"<<endl;
+    for(int i=0; i<n; i++){
+        cout<<num[i]<<" ";
+    }
+    cout<<endl<<"This is the sorted array"<<endl;
+    
+    sort(num,num+n);
+    for(int i=0; i<n; i++){
         cout<<num[i]<<" ";
     }
     return 0;
