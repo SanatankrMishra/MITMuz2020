@@ -15,6 +15,7 @@ void printVec(vector<int> v){
 int main(){
     int n;
     cin>>n;
+    cout<<"Input the No.";
      vector<int> vec;
         for(int i=0; i<=n ; ++i){
             int x;
