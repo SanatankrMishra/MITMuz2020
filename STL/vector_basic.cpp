@@ -25,7 +25,9 @@ int main(){
     printVec(vec);
     
     
-
+    vector<int>vec1(6,3);    //Fills 6 size vector with 3's
+    vector<int>vec3;         // By default it's elements are 0's.
+    vector <int> & vec3 = vec1 ; //We should pass reference(&) instead because it creates copy which takes O(n)
 
     
     
