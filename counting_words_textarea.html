@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Form With String
+    </title>
+</head>
+
+<body style="background-color: rgb(67, 236, 241);">
+    <H3> Length of the TextArea String</H3>
+    <form name="wc">
+        
+        <textarea name="wc2" rows=60em cols=100em  wrap="virtual" style="color:red"></textarea>
+        <input type="button" size=20 value="Calculate Words" onclick="countit()">
+        <input type="text" name="wc3" size=20>
+    </form>
+
+    <script type="text/javascript">
+        countit = () => {
+            var fc=document.wc.wc2.value;
+            fc=fc.split(" ");
+            document.wc.wc3.value=fc.length;
+        }
+
+
+    </script>
+
+
+
+
+    
+</body>
+</html>
