@@ -1,6 +1,4 @@
-#include <iostream>
-#include <functional>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -9,10 +7,14 @@ using namespace std;
 
 int main(){
 
-    char *p;
-    int s = typeof(p);
-    printf("%d",s);
-
+    int t;
+    cin >> t;
+    while(t--){
+        long long k;
+        cin >> k;
+        int a = log2(k);
+        cout << a << endl;
+    }
     
 
 
