@@ -44,13 +44,20 @@ void count_sort(int *a, int n)
 
 }
 
+void radix_sort(int *a,int n){
+    int m = maximum(a,n);
+    for(int k=1;m/k>0;k*=10){
+        count_sort(a,n);
+    }
+}
+
 
 int main(){
 
     int a[] = {17, 19, 13, 33, 21, 2, 7};
     int n = 7;
     printArray(a, n);
-    count_sort(a,n);
+    radix_sort(a,n);
     printArray(a, n);
 
     return 0;
